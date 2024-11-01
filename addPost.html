@@ -4,31 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Add Postt</title>
 </head>
 <body>
     <div class="wrapper">
         <header class="header">
             <li><a href="index.html" class="link">Home</a></li>
-            <li id="login"><a href="login.html"><img src="login.png" id="icon"></a></li>
+            <!--<li id="login"><a href="login.html"><img src="login.png" id="icon"></a></li>-->
+            <div id="user-profile">
+                <img src="Images/User.png" alt="User Photo" id="profile-photo" width="50">
+                <div id="dropdown" style="display: none;">
+                    <p>Kristjan</p>
+                    <p>Kristjan@ut.ee</p>
+                    <a href="login.html">Logout</a>
+                </div>
+            </div>
         </header>
+        <aside class="aside left-bar"></aside>
+            <div class="container">
+            <div class="box">
+                <form action="index.html" method="get">
+                    <label for="post-body">Post body</label>
+                    <textarea id="post-body" name="post-body"></textarea>
+                    
+                    <label for="file-upload">Select file</label>
+                    <input type="file" id="file-upload" name="file-upload">
+                    
+                    <button type="submit">Create post</button>
+                </form>
+            </div>
+        </div>  
+        <aside class="aside right-bar"></aside>
+        <footer class="footer">Footer</footer>
+        
     </div>
-
-    <div class="container">
-        <div class="box">
-            <form action="index.html" method="get">
-                <label for="post-body">Post body</label>
-                <textarea id="post-body" name="post-body"></textarea>
-                
-                <label for="file-upload">Select file</label>
-                <input type="file" id="file-upload" name="file-upload">
-                
-                <button type="submit">Create post</button>
-            </form>
-        </div>
-    </div>
-</div>
-
     
+
+    <script type="text/javascript" src="dropdown.js"></script>
 </body>
 </html>

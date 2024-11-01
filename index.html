@@ -9,13 +9,22 @@
     <body>
         <div class="wrapper">
             <header class="header">
-                <li><a href="index.html" class="link">Home</a></li>
-                <li>|</li>
-                <li><a href="addPost.html" class="link">Add Post</a></li>
-                <li id="login"><a href="login.html"><img src="login.png" id="icon"></a></li>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="link">Home</a></li>
+                    <li>|</li>
+                    <li><a href="addPost.html" class="link">Add Post</a></li>
+                </ul>
+                <!--<li id="login"><a href="login.html"><img src="login.png" id="icon"></a></li>-->
+                <div id="user-profile">
+                    <img src="Images/User.png" alt="User Photo" id="profile-photo" width="50">
+                    <div id="dropdown">
+                        <p>Kristjan</p>
+                        <p>Kristjan@ut.ee</p>
+                        <a href="login.html" id="logout-link">Logout</a>
+                    </div>
+                </div>
             </header>
-            <main class="main">
-            </main>
+            <main class="main" id="postsContainer"></main>
             <aside class="aside left-bar"></aside>
             <aside class="aside right-bar"></aside>
             <footer class="footer">Footer</footer>

@@ -1,6 +1,9 @@
 .wrapper {
     display: flex;  
     flex-flow: row wrap;
+    background: lightblue;
+
+
 }
   
 .wrapper > * {
@@ -9,7 +12,7 @@
 }
   
 .header, .aside, .footer, .post {
-    background: rgb(215, 210, 205);
+    background: linear-gradient(to bottom, gray, white, white, white);;
     margin: 5px;
     border-radius: 10px;
 }
@@ -73,11 +76,16 @@ header a {
 
 .aside {
     width: 10%;
+    padding: 10px;
+    background-image: url(Images/Clouds.png);
+
 }
   
 .footer {
+    pad: 10px;
     text-align: center;
     font-size: larger;
+    background: linear-gradient(to right, lightblue, rgb(136, 136, 196), rgb(150, 150, 208), rgb(136, 136, 196), lightblue);
 }
   
 @media all and (min-width: 600px) {
@@ -86,7 +94,7 @@ header a {
   
 @media all and (min-width: 800px) {
     .main    { flex: 3 0px; }
-    .left-bar { order: 1; } 
+    .left-bar { order: 0; } 
     .main    { order: 2; }
     .right-bar { order: 3; }
     .footer  { order: 4; }
@@ -99,25 +107,26 @@ header a {
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 2em; 
+    background: #001a4d;
 }
 
 .container {
-    flex: 1;
+    flex:1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .box {
-    background-color: rgb(215, 210, 205);
+    background: linear-gradient(to bottom, lightblue, white);
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    width: 500px;
     text-align: center;
 }
 .box h2 {
-    margin-top: 0;
+    margin-top: 0;  
 }
 .box a {
     color: #007bff;
@@ -142,6 +151,7 @@ body {
 }
 .box input[type="text"],
 .box input[type="password"],
+.box input[type="email"],
 .box textarea {
     width: calc(100% - 20px);
     padding: 10px;
@@ -167,3 +177,72 @@ body {
     background-color: #001a4d;
 }
 
+.header {
+    display: flex;  
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Padding for the header */
+    background: linear-gradient(to right, lightblue, rgb(136, 136, 196), rgb(150, 150, 208), rgb(136, 136, 196), lightblue); /* Consistent background color */
+}
+
+.nav-links {
+    display: flex; /* Use flex to arrange links horizontally */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-links li {
+    margin-right: 10px; /* Space between links */
+}
+
+.nav-links li:last-child {
+    margin-right: 0; /* Remove margin from last link */
+}
+
+#login {
+    margin-left: auto; /* Push login section to the right */
+}
+
+#user-profile {
+    position: relative; /* Needed for absolute positioning of the dropdown */
+    cursor: pointer; /* Indicates clickable area */
+}
+
+#dropdown {
+    display: none; /* Hidden by default */
+    position: absolute; /* Positions dropdown relative to #user-profile */
+    top: 60px; /* Adjust based on profile photo size */
+    right: 0; /* Aligns to the right of the profile photo */
+    background-color: white; /* Background color of dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Drop shadow for better visibility */
+    padding: 10px; /* Padding around dropdown items */
+    border-radius: 5px; /* Rounded corners */
+    min-width: 150px; /* Minimum width for dropdown */
+    z-index: 1; /* Ensure it appears above other content */
+    border-style: double;
+}
+
+#dropdown p {
+    margin: 5px 0; /* Margin for text items */
+}
+
+#dropdown a {
+    color: blue; /* Link color */
+    text-decoration: none; /* No underline for links */
+    margin-top: 10px; /* Space above links */
+    display: block; /* Block display for links */
+    text-align: left; /* Center links */
+}
+
+#dropdown a:hover {
+    text-decoration: underline; /* Underline on hover for links */
+}
+
+.post strong {
+    font-size: 1.2em; /* Make username bold and larger */
+}
+
+.post {
+    font-size: 1.2em; /* Increase size for all post text */
+}
